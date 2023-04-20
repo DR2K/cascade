@@ -42,6 +42,7 @@ While appreciated it's ofc by no means necessary. ♡<br><br>
   - [Custom Breakpoint](#oneline-breakpoint)
 - [Integrations](#integrations)
   - [Catppuccin](#catppuccin)
+  - [Rosé Pine](#rosé-pine)
   - [Vertical Tabs](#tab-center-reborn--vertical-tabs)
   - [Side View](#side-view)
 - [Keyboard Shortcuts](#keyboard-shortcuts)
@@ -56,8 +57,12 @@ While appreciated it's ofc by no means necessary. ♡<br><br>
   - Linux: `$HOME/.mozilla/firefox/######.default-release/`
   - MacOS: `Users/[USERNAME]/Library/Application Support/Firefox/Profiles/######.default-release`
   - Windows: `C:\Users\[USERNAME]\AppData\Roaming\Mozilla\Firefox\Profiles\######.default-release`
-4. Copy the `chrome` folder into your profile.
+4. Copy the `chrome` folder into your profile and restart<sup>1)</sup> Firefox.
 5. Customise everything to your liking. (*optional*)
+
+<sup>1) If you're running into trouble with a restart seemingly not working you can navigate to `about:profiles` and click the »*Restart Normally*«-Button.</sup>
+
+<br>
 
 > **Note** **⚠️ Attention Windows users**.<br>
 It seems like `flexbox` (within the Firefox UI) is inheritly broken on Windows. In order to fix the One-Line layout on windows please substitute the [responsive include](chrome/includes/cascade-responsive.css) with the [version for windows](chrome/includes/cascade-responsive-windows-fix.css). This will ensure that the layout doesn't break **but** since it can't use `flexbox` the UI reordering does **not** work.<br>
@@ -89,6 +94,8 @@ This config brings back:
 * the URL Bar Bookmark Button
 * the Hamburger Menu
 * Tab Close Buttons (on hover)
+
+If the buttons inside the URL Bar are off you may need to change the `--uc-page-action-margin` variable in the config as the necessary margin seems to differ depending on ones setup.
 
 <br>
 
@@ -171,8 +178,18 @@ This simply offers premade colour configs for [Catppuccin](https://github.com/ca
 
 </details>
 
+<br>
+
+### Rosé Pine
+
+![Cascade Rosé Pine Preview](assets/cascade-rosepine.webp)
+
+Similar to Catppuccin these are premade colour configs for [Rosé Pine](https://github.com/rose-pine/rose-pine-theme). Featuring the [Default Palette](integrations/rose-pine/cascade-rose-pine.css) as well as [Moon](integrations/rose-pine/cascade-moon.css) with Dawn as light mode for both.
+
+<br>
+
 #### How to set it up
-1. Copy your desired flavour config from [integrations/catppuccin](integrations/catppuccin) into the [includes](includes) folder
+1. Copy your desired colour config from [integrations/catppuccin](integrations/catppuccin) or [integrations/rose-pine](integrations/rose-pine) into the [includes](includes) folder
 2. Replace the colour include in the [userChrome.css](chrome/userChrome.css) with your desired flavour file
 
 > Alternatively you can also just copy the contents of your desired flavour config into the colour config file.
